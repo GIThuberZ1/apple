@@ -1,0 +1,707 @@
+@import url("https://fonts.googleapis.com/css2?family=Lora&family=Montserrat:wght@500&display=swap");
+*,
+html {
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #000000;
+    font-family: "Montserrat", sans-serif;
+}
+
+body {
+    background-color: #222;
+}
+
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    z-index: 9999;
+}
+
+#loader {
+    display: block;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    width: 150px;
+    height: 150px;
+    margin: -75px 0 0 -75px;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    border-top-color: #9370DB;
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+}
+
+#loader:before {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    right: 5px;
+    bottom: 5px;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    border-top-color: #BA55D3;
+    -webkit-animation: spin 3s linear infinite;
+    animation: spin 3s linear infinite;
+}
+
+#loader:after {
+    content: "";
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    right: 15px;
+    bottom: 15px;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    border-top-color: #FF00FF;
+    -webkit-animation: spin 1.5s linear infinite;
+    animation: spin 1.5s linear infinite;
+}
+
+@-webkit-keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+header {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 80px;
+    display: flex;
+    padding: 0 30px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 13px;
+    font-size: larger;
+}
+
+img.logi {
+    width: 60px;
+    background-color: #000000;
+}
+
+nav a:hover {
+    color: #f4cdcd;
+    text-shadow: 0 1px 5px #f2ff00;
+    transition: 1s;
+}
+
+.head-block {
+    width: 100%;
+    height: 100vh;
+    background-image: url(https://wpapers.ru/wallpapers/comp/apple/9106/1920x1080_Apple.jpg);
+    background-size: cover;
+}
+
+.filter {
+    width: 100%;
+    height: 100%;
+    background-image: -webkit-linear-gradient(top, rgba(217, 255, 0, 0.89), rgba(0, 0, 0, 0.6));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #fff;
+}
+
+.filter h1 {
+    font-size: 65px;
+    font-weight: 900;
+    opacity: 70%;
+    box-shadow: #f2ff00;
+    text-shadow: 0 1px 8px #f2ff00, 0 1px 8px #f2ff00;
+    padding-bottom: 50px;
+}
+
+.filter p {
+    font-size: 27px;
+    opacity: 90%;
+    max-width: 40%;
+    text-align: center;
+}
+
+.btn {
+    text-decoration: none;
+    background-color: #313131;
+    padding: 10px 30px;
+    color: #f4cdcd;
+    text-shadow: 0 1px 5px #f2ff00;
+    transition: 1s;
+}
+
+a.btn {
+    text-decoration: none;
+    background-image: -o-linear-gradient(45deg, #ff0000 #ffffff);
+    padding: 10px 30px;
+    border-radius: 30px;
+    margin-bottom: 50px;
+    color: #f2ff00;
+    font-size: large;
+    border: 3px solid black;
+    margin-top: 50px;
+}
+
+a.btn:hover {
+    box-shadow: 10px 10px #313131;
+    background-color: #f2ff00;
+    transform: rotateX(360deg);
+    transition: 1s;
+}
+
+.categories {
+    padding: 135px 0 150px 0;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.all-card {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    background-color: #222;
+}
+
+.card {
+    width: 560px;
+    height: 260px;
+    overflow: hidden;
+}
+
+.card a img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    filter: brightness(40%);
+    transition: 0.5s;
+}
+
+.card a img:hover {
+    transform: scale(1.1);
+    transition: 0.5s;
+}
+
+.i-img:hover {
+    scale: 1.1;
+    transition: 0.5s;
+}
+
+.card a {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card a p {
+    position: absolute;
+    top: 1;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 55px;
+    letter-spacing: 3px;
+}
+
+.cat-title {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cat-title h2 {
+    font-size: 50px;
+}
+
+.cat-title p {
+    font-size: 24px;
+    opacity: 50%;
+    max-width: 50%;
+    padding: 30px 0;
+}
+
+
+/*# sourceMappingURL=style.css.map */
+
+.product {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.product h2 {
+    font-size: 50px;
+    padding-bottom: 30px;
+    color: #f2ff00;
+}
+
+.pro-card {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 50px;
+    column-gap: 25px;
+    justify-content: center;
+    max-width: 90%;
+}
+
+.i-card {
+    width: 320px;
+    background-size: cover;
+    background-position-x: center;
+    background-position-y: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.i-img {
+    height: 300px;
+    width: 100%;
+    background-size: cover;
+}
+
+.i-title {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+}
+
+.i-title span {
+    opacity: 50%;
+    text-decoration: line-through;
+}
+
+button.basket {
+    background-color: #000;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 10px 40px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button.basket:hover {
+    background-color: #37372e;
+}
+
+.i-card h3 {
+    text-align: center;
+    padding: 15px 0;
+}
+
+.about {
+    width: 100%;
+    height: 100vh;
+    background-image: url(https://scientificrussia.ru/images/0/10s0-full.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-body {
+    height: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+    gap: 20px;
+}
+
+.about-title {
+    color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+    max-width: 500px;
+}
+
+.about-img {
+    width: 700px;
+}
+
+.about-title h2 {
+    font-size: 45px;
+    padding-bottom: 40px;
+}
+
+.about-title p {
+    font-size: 24px;
+    opacity: 70%;
+}
+
+.contacts {
+    width: 100%;
+    padding: 150px 20px 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.left {
+    flex: 1;
+    gap: 10px;
+    padding-left: 30px;
+}
+
+.left-title {
+    display: flex;
+    flex-direction: column;
+    padding-left: 30px;
+}
+
+.left-title a {
+    text-decoration: none;
+    font-size: 20px;
+    color: #000;
+    text-shadow: #000;
+}
+
+.left-title h2 {
+    font-size: 40px;
+    padding-bottom: 20px;
+}
+
+.social {
+    display: flex;
+    justify-content: flex-start;
+    gap: 10px;
+    padding-top: 50px;
+}
+
+.right {
+    flex: 1;
+}
+
+.map {}
+
+.social a {
+    text-decoration: none;
+}
+
+.social a img {
+    width: 60px;
+}
+
+.social a img:hover {
+    transform: scale(1.1);
+    transition: 0.5s;
+}
+
+.card-bs {
+    cursor: pointer;
+    position: fixed;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    z-index: 99999;
+}
+
+.img-basket {
+    width: 50px;
+}
+
+.total-price {
+    color: #000;
+}
+
+#cart-items {
+    position: fixed;
+    right: 0;
+    top: 60px;
+    background-color: #47473b;
+    padding: 20px 50px;
+    z-index: 999;
+    color: #000;
+}
+
+.total-text {
+    color: #000000;
+    padding-bottom: 15px;
+    /* font-size: 20px; */
+}
+
+.btn-basket {
+    text-decoration: none;
+    background-color: #ffffff;
+    border-radius: 5px;
+    padding: 10px 50px;
+    color: #000;
+}
+
+.remove {
+    background-color: #ff0000;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    padding: 5px 8px;
+    margin-left: 10px;
+    display: inline;
+}
+
+#list-item {
+    color: #000;
+    padding: 15px 15px 15px 0;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    list-style: circle;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+#list-item li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 10px;
+}
+
+.total-price {
+    color: #f2ff00;
+}
+
+.mobile-menu {
+    width: 100%;
+}
+
+.mobile-header {
+    width: 100%;
+    height: 50px;
+    background-color: rgb(199, 204, 68);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0 38px;
+    z-index: 100;
+    position: absolute;
+    top: 0;
+}
+
+.mobile-burger {
+    width: 30px;
+    height: 20px;
+}
+
+.burger {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transition: 0.3s;
+}
+
+.mobile-link {
+    width: 100%;
+    height: 100vh;
+    background-color: #f6f5eb;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    flex-direction: column;
+    padding-top: 100px;
+    position: absolute;
+    top: -100%;
+    z-index: 1;
+    transition: 0.5s;
+}
+
+.burger.active::before {
+    top: 9px;
+    transform: rotate(45deg);
+}
+
+.burger.active::after {
+    bottom: 9px;
+    transform: rotate(-45deg);
+}
+
+.burger.active span {
+    transform: scale(0);
+}
+
+.mobile-link.active {
+    top: 0;
+}
+
+.mobile-link a {
+    font-size: 32px;
+    text-decoration: none;
+    color: #2e2e1f;
+    padding-bottom: 10px;
+}
+
+.logi {}
+
+.mobile-menu {
+    display: none;
+}
+
+.slider {}
+
+.swiper-slide {}
+
+@media (max-width: 960px) {
+    img.logi,
+    nav,
+    .none-block {
+        display: none;
+    }
+    .mobile-menu {
+        display: block;
+    }
+    .card-bs {
+        top: 590px;
+        right: 20px;
+    }
+    #cart-items {
+        top: 68vh;
+    }
+    header {
+        z-index: -1;
+    }
+}
+
+@media (max-width: 500px) {
+    .filter h1 {
+        font-size: 40px;
+        text-align: center;
+    }
+    .filter p {
+        max-width: 100%;
+        font-size: 20px;
+    }
+    .filter {
+        padding: 0 20px;
+    }
+    a.btn {
+        padding: 15px 40px;
+    }
+    .categories {
+        padding-top: 30px;
+    }
+    .cat-title p {
+        max-width: 100%;
+    }
+    .cat-title {
+        max-width: 100%;
+    }
+    .left,
+    .right {
+        flex: 0;
+        padding-left: 0;
+    }
+    .right {
+        padding: 0;
+    }
+    .left {
+        padding-bottom: 30px;
+    }
+    #cart-items {
+        width: 100%;
+        height: 100vh;
+        overflow: auto;
+        top: 0;
+        left: 0;
+    }
+    .left-title {
+        padding-left: 0;
+    }
+    .product {
+        margin-bottom: 132px;
+    }
+    .product h2,
+    .about-title h2 {
+        font-size: 25px;
+    }
+    .about-title {
+        width: 100%;
+        height: 100%;
+    }
+    .about-title p {
+        font-size: 14px;
+    }
+}
+
+.burger::after,
+.burger::before {
+    content: '';
+    height: 1px;
+    width: 100%;
+    background-color: #110909;
+    position: absolute;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.burger::after {
+    bottom: 0;
+}
+
+.burger::before {
+    top: 0;
+}
+
+.burger span {
+    height: 1px;
+    width: 100%;
+    background-color: #110909;
+    position: absolute;
+    border-radius: 5px;
+    top: 9px;
+}
